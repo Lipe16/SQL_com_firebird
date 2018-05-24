@@ -3,16 +3,18 @@
 -- deletando um produto pelo seu id na tabela
 DELETE FROM produtos  where id = 4;
 
+
+--verificando produtos na tabela
 SELECT * FROM produtos;
 
--- deletando na tabela produtos com retorno 
---dos campos deletados informando seus nomes com retorning
+/*deletando na tabela produtos com retorno 
+dos campos deletados informando seu conteúdo com retorning*/
 DELETE FROM PRODUTOS where id = 4 returning descricao, preco;
 
 DELETE FROM PRODUTOS where id > 0 rows 1 returning descricao, preco;
 
 
--- Atualidando valor de produto pelo seu id
+-- Atualizando valor de um produto pelo seu id
 UPDATE produtos set descricao = 'Computador' where id = 4;
 
 -- Atualizando produto pelo id e retornando novos valores com returning
